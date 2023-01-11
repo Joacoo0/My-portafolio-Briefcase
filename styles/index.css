@@ -439,7 +439,7 @@ html {
   font-size: 40px;
   margin: 0% auto;
   margin-bottom: 3rem;
-  padding-top: 5rem;
+  padding-top: 2rem;
   text-align: center;
 }
 .conteiner-skills .contenido-skills {
@@ -583,6 +583,42 @@ html {
 .conteiner-contac .contenedor-cajas .caja2:hover {
   box-shadow: 0px 0px 30px 0px black;
   transform: scale(1.1);
+}
+
+.conteiner-footer {
+  height: 14vh;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner-footer footer .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 10px;
+}
+.conteiner-footer footer .icons i {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.681);
+  padding-left: 10px;
+  transition: 0.2s;
+}
+.conteiner-footer footer .icons i:hover {
+  color: white;
+  transform: scale(1.1);
+}
+.conteiner-footer footer .copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.conteiner-footer footer .copy p {
+  font-size: 16px;
+  font-family: "roboto", sans-serif;
+  color: rgba(255, 255, 255, 0.579);
 }
 
 * {

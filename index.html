@@ -60,10 +60,10 @@
       <div class="conteiner">
         <div class="navbar">
           <nav>
-            <a href="./index.html" id="inicio">Inicio</a>
-            <a href="" id="sobre mi">Sobre Mi</a>
-            <a href="" id="proyecto">Proyecto</a>
-            <a href="" id="contacto">Contacto</a>
+            <a href="#inicio" id="inicio">Sobre Mi</a>
+            <a href="#proyectos" id="sobre mi">Proyectos</a>
+            <a href="#skills" id="proyecto">Skills</a>
+            <a href="#contact" id="contacto">Contacto</a>
           </nav>
         </div>
       </div>
@@ -97,7 +97,7 @@
         </div>
          -->
 
-    <div class="conteiner">
+    <div class="conteiner" id="inicio">
       <div class="conteiner-info">
         <div class="title-sobre-mi">
           <h2>Sobre <b>Mi</b></h2>
@@ -125,7 +125,7 @@
         <img src="./img/yo.jpg" alt="" />
       </div>
     </div>
-
+    <div id="proyectos">
     <div class="title-proyectos">
       <h2>Proye<b>ctos</b></h2>
     </div>
@@ -141,6 +141,7 @@
         </div>
       </div>
     </div>
+    
 
     <div class="proyectos">
       <div class="card">
@@ -155,7 +156,10 @@
       </div>
     </div>
 
-    <div class="conteiner-skills">
+
+  </div>
+
+    <div class="conteiner-skills" id="skills">
       <div>
         <h2>My skills</h2>
       </div>
@@ -178,7 +182,7 @@
       </div>
     </div>
 
-    <div class="conteiner-contac">
+    <div class="conteiner-contac" id="contact">
       <div class="title-contac">
         <h2>Contactame</h2>
       </div>
@@ -197,6 +201,19 @@
         </div>
       </div>
     </div>
+    
+      <div class="conteiner-footer">
+        <footer>
+          <div class="icons">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-discord"></i>
+        </div>
+        <div class="copy">
+          <p>Copyright © 2023 | Joaquin Arrua</p>
+        </div>
+        </footer>
+      </div>
 
     <!-- ICONOS -->
 
@@ -232,6 +249,34 @@
     <!-- ANIMACIONES -->
 
     <!-- SCRIPTS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
   </body>
 </html>
 
