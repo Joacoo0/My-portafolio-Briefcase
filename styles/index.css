@@ -30,6 +30,7 @@ header .conteiner .navbar nav a:hover {
   header .conteiner .navbar nav a {
     color: #fffcf1;
     margin: 15px;
+    padding: 10px;
     font-size: 16px;
     font-family: "roboto", sans-serif;
   }
@@ -60,7 +61,7 @@ html {
   flex-direction: column;
 }
 .sobre-mi .title-sobre-mi h2 {
-  color: black;
+  color: #313131;
   font-size: 34px;
   font-weight: bold;
   font-family: "roboto", sans-serif;
@@ -369,6 +370,7 @@ html {
   align-items: center;
   height: 70vh;
   background-color: #fffcf9;
+  width: 100%;
 }
 .proyectos .card {
   box-shadow: 0px 0px 30px 0px black;
@@ -432,11 +434,9 @@ html {
   width: 100%;
   height: 60vh;
   background-color: rgb(222, 221, 221);
-  padding: 1rem;
 }
 .conteiner-skills h2 {
   font-size: 40px;
-  width: 500px;
   margin: 0% auto;
   margin-bottom: 3rem;
   padding-top: 5rem;
@@ -453,6 +453,7 @@ html {
   transition: transform 0.2s;
   transition: 0.2s linear;
   width: 234px;
+  filter: drop-shadow(8px 8px 4px #313131);
 }
 .conteiner-skills .contenido-skills div:hover {
   transform: scale(1.1);
@@ -465,6 +466,123 @@ html {
   color: black;
   margin-top: 1rem;
   font-family: "roboto", sans-serif;
+}
+
+.conteiner-contac {
+  height: 50vh;
+  width: 100%;
+}
+.conteiner-contac .title-contac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+.conteiner-contac .title-contac h2 {
+  color: #313131;
+  font-size: 35px;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+}
+.conteiner-contac .contenedor-cajas {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 70px;
+}
+.conteiner-contac .contenedor-cajas .caja1 {
+  background-color: #212121;
+  width: 330px;
+  height: 120px;
+  border-radius: 13px;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  transition: 0.3s;
+}
+.conteiner-contac .contenedor-cajas .caja1 img {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+  display: flex;
+  border-radius: 10px;
+}
+.conteiner-contac .contenedor-cajas .caja1 h4 {
+  color: #fffcf1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "roboto", sans-serif;
+}
+.conteiner-contac .contenedor-cajas .caja1 p {
+  color: rgba(255, 252, 241, 0.6901960784);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "roboto", sans-serif;
+}
+.conteiner-contac .contenedor-cajas .caja1:hover {
+  box-shadow: 0px 0px 30px 0px black;
+  transform: scale(1.1);
+}
+.conteiner-contac .contenedor-cajas .caja2 {
+  background-color: #212121;
+  width: 330px;
+  height: 120px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.conteiner-contac .contenedor-cajas .caja2 img {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+  display: flex;
+  border-radius: 10px;
+}
+.conteiner-contac .contenedor-cajas .caja2 h4 {
+  color: #fffcf1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "roboto", sans-serif;
+}
+.conteiner-contac .contenedor-cajas .caja2 p {
+  color: rgba(255, 252, 241, 0.6901960784);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "roboto", sans-serif;
+}
+.conteiner-contac .contenedor-cajas .caja2 p:hover {
+  border-bottom: 1px gray solid;
+  color: white;
+  cursor: pointer;
+}
+.conteiner-contac .contenedor-cajas .caja2:hover {
+  box-shadow: 0px 0px 30px 0px black;
+  transform: scale(1.1);
 }
 
 * {
