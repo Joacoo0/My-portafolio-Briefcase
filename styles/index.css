@@ -1,4 +1,4 @@
-header .conteiner {
+header .conteiner-navbar {
   background-color: #313131;
   width: 100%;
   height: 50px;
@@ -7,53 +7,67 @@ header .conteiner {
   justify-content: center;
   align-items: center;
 }
-header .conteiner .navbar nav a {
+header .conteiner-navbar .navbar nav a {
   color: #fffcf1;
   margin: 10px;
   font-size: 16px;
   font-family: "roboto", sans-serif;
 }
-header .conteiner .navbar nav a:hover {
+header .conteiner-navbar .navbar nav a:hover {
   color: orangered;
 }
 
 @media (min-width: 768px) {
-  header .conteiner {
+  header .conteiner-navbar {
     background-color: #313131;
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-  header .conteiner .navbar nav a {
+  header .conteiner-navbar .navbar nav a {
     color: #fffcf1;
     margin: 15px;
     padding: 10px;
     font-size: 16px;
     font-family: "roboto", sans-serif;
+    background-image: linear-gradient(90deg, #ffa362, #ffb804, #e37c22);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+    transition: background-size 600ms ease-in-out;
   }
-  header .conteiner .navbar nav a:hover {
-    color: rgba(255, 68, 0, 0.807);
+  header .conteiner-navbar .navbar nav a:hover {
+    color: #ec6f09;
     transition-duration: 0.3s;
+    background-size: 100% 2px;
   }
 }
 .conteiner {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
 .conteiner .conteiner-info {
-  width: 40%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .title-sobre-mi h2 {
   color: black;
-  font-size: 34px;
+  font-size: 24px;
   font-weight: bold;
   font-family: "roboto", sans-serif;
   display: block;
@@ -89,7 +103,7 @@ header .conteiner .navbar nav a:hover {
 }
 
 .texto-sobre-mi {
-  width: 100%;
+  width: 50%;
   -webkit-animation: move2 1s;
           animation: move2 1s;
 }
@@ -120,10 +134,9 @@ header .conteiner .navbar nav a:hover {
   }
 }
 .texto-sobre-mi p {
-  font-size: 1.2rem;
   margin-bottom: 10px;
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+  font-size: 17px;
   justify-content: center;
   transition: 0.25s linear;
   opacity: 0.8;
@@ -146,6 +159,10 @@ header .conteiner .navbar nav a:hover {
   width: 100%;
   -webkit-animation: move3 1.5s;
           animation: move3 1.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .mis-redes b {
   color: orangered;
@@ -184,7 +201,7 @@ header .conteiner .navbar nav a:hover {
 }
 .mis-redes i {
   margin-top: 5px;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 100%;
   margin: 7px;
   transition: 0.2s;
@@ -194,19 +211,20 @@ header .conteiner .navbar nav a:hover {
   transform: scale(1.1);
 }
 
-.conteiner-img img {
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 60px 1px #212121, 0px 0px 60px 1px rgba(255, 68, 0, 0.393);
+.conteiner-img {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 300px;
+  flex-direction: column;
+}
+.conteiner-img img {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 60px 1px #212121, 0px 0px 60px 1px rgba(255, 68, 0, 0.393);
   -webkit-animation: img 1.2s;
           animation: img 1.2s;
-  -webkit-animation: img 1.2s ease-in;
-          animation: img 1.2s ease-in;
   opacity: 4;
 }
 .conteiner-img img:hover {
@@ -245,6 +263,8 @@ header .conteiner .navbar nav a:hover {
   font-size: 47px;
   font-weight: bold;
   font-family: "roboto", sans-serif;
+  -webkit-animation: brillo 2s infinite;
+          animation: brillo 2s infinite;
 }
 .title-proyectos h2 b {
   color: orangered;
@@ -254,8 +274,8 @@ header .conteiner .navbar nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   justify-content: space-around;
+  flex-direction: column;
   padding: 0px;
   margin: 0px;
   margin: auto;
@@ -265,7 +285,7 @@ header .conteiner .navbar nav a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 40vh;
   background-color: #fffcf9;
   width: 100%;
 }
@@ -341,7 +361,7 @@ header .conteiner .navbar nav a:hover {
 
 .conteiner-skills {
   width: 100%;
-  height: 60vh;
+  height: 90vh;
   background-color: rgb(222, 221, 221);
 }
 .conteiner-skills h2 {
@@ -354,7 +374,7 @@ header .conteiner .navbar nav a:hover {
 }
 .conteiner-skills .contenido-skills {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -363,6 +383,7 @@ header .conteiner .navbar nav a:hover {
   transition: transform 0.2s;
   transition: 0.2s linear;
   width: 234px;
+  margin-bottom: 30px;
   filter: drop-shadow(8px 8px 4px #313131);
 }
 .conteiner-skills .contenido-skills div:hover {
@@ -402,19 +423,20 @@ header .conteiner .navbar nav a:hover {
   justify-content: center;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 70px;
 }
 .conteiner-contac .contenedor-cajas .caja1 {
   background-color: #212121;
-  width: 330px;
-  height: 120px;
+  width: 270px;
+  height: 100px;
   border-radius: 13px;
   display: flex;
   padding-left: 10px;
   align-items: center;
   transition: 0.3s;
   box-shadow: 0px 0px 20px 0px #313131;
+  margin-bottom: 13px;
 }
 .conteiner-contac .contenedor-cajas .caja1 img {
   width: 30px;
@@ -451,8 +473,8 @@ header .conteiner .navbar nav a:hover {
 }
 .conteiner-contac .contenedor-cajas .caja2 {
   background-color: #212121;
-  width: 330px;
-  height: 120px;
+  width: 270px;
+  height: 100px;
   border-radius: 13px;
   display: flex;
   align-items: center;
@@ -475,7 +497,7 @@ header .conteiner .navbar nav a:hover {
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
   font-family: "roboto", sans-serif;
 }
@@ -484,9 +506,8 @@ header .conteiner .navbar nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
   padding-right: 10px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   font-family: "roboto", sans-serif;
 }
@@ -500,6 +521,482 @@ header .conteiner .navbar nav a:hover {
   transform: scale(1.1);
 }
 
+@media (min-width: 768px) {
+  .conteiner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+  }
+  .conteiner .conteiner .conteiner-info {
+    width: 40%;
+  }
+  .conteiner .title-sobre-mi {
+    width: 100%;
+    padding-left: 70px;
+  }
+  .conteiner .title-sobre-mi h2 {
+    color: black;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 8ch;
+    -webkit-animation: typing 2.3s steps(12), blink 0.5s infinite step-end alternate;
+            animation: typing 2.3s steps(12), blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  .conteiner .title-sobre-mi h2 b {
+    color: orangered;
+  }
+  .conteiner .texto-sobre-mi {
+    width: 90%;
+    -webkit-animation: move2 1s;
+            animation: move2 1s;
+  }
+  @-webkit-keyframes move2 {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .conteiner .texto-sobre-mi p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    justify-content: center;
+    transition: 0.25s linear;
+    opacity: 0.8;
+  }
+  .conteiner .texto-sobre-mi p .html {
+    color: rgb(255, 68, 0);
+  }
+  .conteiner .texto-sobre-mi p .css {
+    color: rgb(0, 81, 255);
+  }
+  .conteiner .texto-sobre-mi p .scss {
+    color: rgb(226, 115, 152);
+  }
+  .conteiner .texto-sobre-mi p .a {
+    color: orangered;
+  }
+  .conteiner .mis-redes {
+    margin-top: 10px;
+    width: 100%;
+    -webkit-animation: move3 1.5s;
+            animation: move3 1.5s;
+    display: flex;
+    flex-direction: column;
+    padding-right: 390px;
+  }
+  @-webkit-keyframes move3 {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 9;
+    }
+  }
+  @keyframes move3 {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 9;
+    }
+  }
+  .conteiner .mis-redes .title-redes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conteiner .mis-redes .title-redes h2 {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+  }
+  .conteiner .mis-redes .title-redes h2 b {
+    color: orangered;
+  }
+  .conteiner .mis-redes .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .conteiner .mis-redes .icon i {
+    margin-top: 5px;
+    font-size: 30px;
+    border-radius: 100%;
+    margin: 7px;
+    transition: 0.2s;
+  }
+  .conteiner .mis-redes .icon i:hover {
+    color: orangered;
+    transform: scale(1.1);
+  }
+  .conteiner .conteiner-img {
+    width: 100%;
+  }
+  .conteiner .conteiner-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px 1px #212121, 0px 0px 60px 1px rgba(255, 68, 0, 0.393);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: img 1.2s;
+            animation: img 1.2s;
+    -webkit-animation: img 1.2s ease-in;
+            animation: img 1.2s ease-in;
+    opacity: 4;
+  }
+  .conteiner .conteiner-img img:hover {
+    transform: scale(1.1);
+  }
+  @-webkit-keyframes img {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes img {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .title-proyectos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffcf9;
+  }
+  .title-proyectos h2 {
+    font-size: 47px;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+  }
+  .title-proyectos h2 b {
+    color: orangered;
+  }
+  .conjunto-proyect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0px;
+    margin: auto;
+  }
+  .conjunto-proyect .proyectos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #fffcf9;
+    width: 100%;
+  }
+  .conjunto-proyect .proyectos .card {
+    box-shadow: 0px 0px 30px 0px black;
+    width: 250px;
+    height: 300px;
+    background-color: orangered;
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conjunto-proyect .proyectos .card:hover {
+    box-shadow: 0px 0px 30px 0px red;
+  }
+  .conjunto-proyect .proyectos .card2 {
+    width: 250px;
+    height: 300px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .conjunto-proyect .proyectos .card2 h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    padding-top: 5px;
+    font-family: "roboto", sans-serif;
+    padding-top: 10px;
+  }
+  .conjunto-proyect .proyectos .card2 .img img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .conjunto-proyect .proyectos .card2 p {
+    color: #fffcf9;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conjunto-proyect .proyectos .card2 .des {
+    color: rgba(252, 246, 239, 0.6666666667);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-style: italic;
+  }
+  .conjunto-proyect .proyectos .card2:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+  }
+  .conjunto-proyect .proyectos .card:hover {
+    box-shadow: 0px 0px 60px 1px orangered;
+  }
+  .conteiner-skills {
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(222, 221, 221);
+  }
+  .conteiner-skills h2 {
+    font-size: 40px;
+    font-family: "roboto", sans-serif;
+    margin: 0% auto;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+  }
+  .conteiner-skills .contenido-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .conteiner-skills .contenido-skills div {
+    text-align: center;
+    transition: transform 0.2s;
+    transition: 0.2s linear;
+    width: 234px;
+    filter: drop-shadow(8px 8px 4px #313131);
+  }
+  .conteiner-skills .contenido-skills div:hover {
+    transform: scale(1.1);
+  }
+  .conteiner-skills .contenido-skills div img {
+    width: 8rem;
+    cursor: pointer;
+  }
+  .conteiner-skills .contenido-skills div p {
+    color: black;
+    margin-top: 1rem;
+    font-family: "roboto", sans-serif;
+  }
+  .conteiner-contac {
+    height: 50vh;
+    width: 100%;
+  }
+  .conteiner-contac .title-contac {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .conteiner-contac .title-contac h2 {
+    color: #313131;
+    font-size: 35px;
+    font-family: "roboto", sans-serif;
+    font-weight: bold;
+  }
+  .conteiner-contac .title-contac h2 b {
+    color: orangered;
+  }
+  .conteiner-contac .contenedor-cajas {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 70px;
+  }
+  .conteiner-contac .contenedor-cajas .caja1 {
+    background-color: #212121;
+    width: 330px;
+    height: 120px;
+    border-radius: 13px;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    transition: 0.3s;
+    box-shadow: 0px 0px 20px 0px #313131;
+    margin: 0px;
+  }
+  .conteiner-contac .contenedor-cajas .caja1 img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    display: flex;
+    border-radius: 10px;
+  }
+  .conteiner-contac .contenedor-cajas .caja1 h4 {
+    color: #fffcf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+  }
+  .conteiner-contac .contenedor-cajas .caja1 p {
+    color: rgba(255, 252, 241, 0.6901960784);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+  }
+  .conteiner-contac .contenedor-cajas .caja1:hover {
+    box-shadow: 0px 0px 30px 0px black;
+    transform: scale(1.1);
+  }
+  .conteiner-contac .contenedor-cajas .caja2 {
+    background-color: #212121;
+    width: 330px;
+    height: 120px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 20px 0px #313131;
+  }
+  .conteiner-contac .contenedor-cajas .caja2 img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    display: flex;
+    border-radius: 10px;
+  }
+  .conteiner-contac .contenedor-cajas .caja2 h4 {
+    color: #fffcf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+  }
+  .conteiner-contac .contenedor-cajas .caja2 p {
+    color: rgba(255, 252, 241, 0.6901960784);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+  }
+  .conteiner-contac .contenedor-cajas .caja2 p:hover {
+    border-bottom: 1px gray solid;
+    color: white;
+    cursor: pointer;
+  }
+  .conteiner-contac .contenedor-cajas .caja2:hover {
+    box-shadow: 0px 0px 30px 0px black;
+    transform: scale(1.1);
+  }
+}
 .conteiner-footer {
   height: 14vh;
   background-color: #111111;
@@ -544,4 +1041,14 @@ header .conteiner .navbar nav a:hover {
 a {
   color: white;
   text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: whitesmoke;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #212121;
+  height: 50px;
 }/*# sourceMappingURL=index.css.map */

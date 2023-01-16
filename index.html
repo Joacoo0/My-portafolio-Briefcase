@@ -57,7 +57,7 @@
 
   <body>
     <header>
-      <div class="conteiner">
+      <div class="conteiner-navbar">
         <div class="navbar">
           <nav>
             <a href="#inicio" id="inicio">Sobre Mi</a>
@@ -114,61 +114,79 @@
           </p>
         </div>
         <div class="mis-redes">
+          <div class="title-redes">
           <h2>Mis Redes <b>Sociales</b></h2>
+        </div>
+          <div class="icon">
           <i class="fab fa-instagram"></i>
           <i class="fab fa-github"></i>
           <i class="fab fa-discord"></i>
+        </div>
         </div>
       </div>
       <div class="conteiner-img">
         <img src="./img/yo.jpg" alt="" />
       </div>
-</div>
-
-
+    </div>
 
     <div id="proyectos">
-    <div class="title-proyectos">
-      <h2>Proye<b>ctos</b></h2>
-    </div>
-    <div class="conjunto-proyect">
-     
-    <div class="proyectos">
-      <a href="https://labajada-bar.netlify.app/" target="_blank">
-      <div class="card">
-        <div class="card2">
-          <h2>La Bajada</h2>
-          <div class="img">
-            <img src="./img/labajada.png" />
-          </div>
-          <p>Pagina de Bar</p>
-          <p class="des">(En Desarrollo)</p>
+      <div class="title-proyectos">
+        <h2>Proye<b>ctos</b></h2>
+      </div>
+
+      <div class="conjunto-proyect">
+        <div class="proyectos">
+          <a href="https://labajada-bar.netlify.app/" target="_blank">
+            <div class="card">
+              <div class="card2">
+                <h2>La Bajada</h2>
+                <div class="img">
+                  <img src="./img/labajada.png" />
+                </div>
+                <p>Pagina de Bar</p>
+                <p class="des">(En Desarrollo)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="proyectos">
+          <a
+            href="https://aesthetic-capybara-727750.netlify.app/"
+            target="_blank"
+          >
+            <div class="card">
+              <div class="card2">
+                <h2>Personal Portafolio</h2>
+                <div class="img">
+                  <img src="./img/portafolio.png" />
+                </div>
+                <p>Portafolio</p>
+                <p class="des"></p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="proyectos">
+          <a
+            href="https://aesthetic-capybara-727750.netlify.app/"
+            target="_blank"
+          >
+            <div class="card">
+              <div class="card2">
+                <h2>Levite</h2>
+                <div class="img">
+                  <img src="./img/bcd2b28.png" />
+                </div>
+                <p>Rediseño de Levite</p>
+                <p class="des">(En Desarrollo)</p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-    </a>
     </div>
-
-
-    <div class="proyectos">
-      <a href="https://aesthetic-capybara-727750.netlify.app/" target="_blank">
-      <div class="card">
-        <div class="card2">
-          <h2>Personal Portafolio</h2>
-          <div class="img">
-            <img src="./img/portafolio.png" />
-          </div>
-          <p>Portafolio</p>
-          <p class="des">(En Desarrollo)</p>
-        </div>
-      </div>
-      </a>
-    </div>
-
-
-
-  </div>
-
-  </div>
 
     <div class="conteiner-skills" id="skills">
       <div>
@@ -207,15 +225,18 @@
         <div class="caja2">
           <img src="./img/mensaje.gif" alt="" />
           <h4>Email</h4>
-          <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKHQdBCzsQtSqzVzVvNkzzlLsNrWrSzqtmZjnBwVvgfrspMkDcsKHjCWkwDWkFVJGPvWkFL" target="_blank"><p>joaquin07david@gmail.com</p></a>
-
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKHQdBCzsQtSqzVzVvNkzzlLsNrWrSzqtmZjnBwVvgfrspMkDcsKHjCWkwDWkFVJGPvWkFL"
+            target="_blank"
+            ><p>joaquin07david@gmail.com</p></a
+          >
         </div>
       </div>
     </div>
-    
-      <div class="conteiner-footer">
-        <footer>
-          <div class="icons">
+
+    <div class="conteiner-footer">
+      <footer>
+        <div class="icons">
           <i class="fab fa-instagram"></i>
           <i class="fab fa-github"></i>
           <i class="fab fa-discord"></i>
@@ -223,8 +244,8 @@
         <div class="copy">
           <p>Copyright © 2023 | Joaquin Arrua</p>
         </div>
-        </footer>
-      </div>
+      </footer>
+    </div>
 
     <!-- ICONOS -->
 
@@ -260,35 +281,37 @@
     <!-- ANIMACIONES -->
 
     <!-- SCRIPTS -->
-<!-- scroll -->
+    <!-- scroll -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+            // Store hash
+            var hash = this.hash;
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              900,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
       });
-    } // End if
-  });
-});
-</script>
-<!-- SCROLL -->
+    </script>
+    <!-- SCROLL -->
   </body>
 </html>
 

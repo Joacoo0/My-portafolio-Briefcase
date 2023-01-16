@@ -1,5 +1,5 @@
 header {
-  .conteiner {
+  .conteiner-navbar {
     background-color: #313131;
     width: 100%;
     height: 50px;
@@ -27,10 +27,10 @@ header {
 
 @media (min-width: 768px) {
   header {
-    .conteiner {
+    .conteiner-navbar {
       background-color: #313131;
       width: 100%;
-      height: 50px;
+      height: 60px;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -44,10 +44,20 @@ header {
             padding: 10px;
             font-size: 16px;
             font-family: "roboto", sans-serif;
+            background-image: linear-gradient(90deg, #ffa362, #ffb804, #e37c22);
+            // background-image: linear-gradient(90deg, #62aeff, #ff0468, #af4ffe);
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            background-position: left bottom;
+            transition: background-size 600ms ease-in-out;
 
             &:hover {
-              color: rgba(255, 68, 0, 0.807);
+              color: #ec6f09;
               transition-duration: 0.3s;
+              background-size: 100% 2px;
             }
           }
         }
